@@ -18,7 +18,13 @@ const getSum = () => {
 	labelCell.setAttribute("colspan", 1);
 	totalRow.appendChild(labelCell);
 
-	let totalCell = document.createElement
+	let totalCell = document.createElement("td");
+    totalCell.textContent = totalPrice;
+
+    totalRow.appendChild(totalCell);
+
+    const table = document.querySelector("table");
+    table.appendChild(totalRow);
 };
 
 getSumBtn.addEventListener("click", getSum);
